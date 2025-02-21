@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight" layer(base);
+@import "tailwindcss/utilities" layer(utilities);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* input.css */
+
+/* Подключение Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Переменные для темной и светлой темы */
+:root {
+    --bg-light: #f9fafb;
+    --bg-dark: #1f2937;
+    --text-light: #374151;
+    --text-dark: #e5e7eb;
+    
+}
+
+/* Стили для темной и светлой темы */
+body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "Architects Daughter", serif;
+}
+
+/* Для темной темы добавляется класс .dark */
+body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+/* Стили для элементов с фоном */
+.bg-gray-50 {
+    background-color: var(--bg-light);
+}
+
+.dark .bg-gray-50 {
+    background-color: var(--bg-dark);
+}
+
+.bg-gray-100 {
+    background-color: #f3f4f6;
+}
+
+.dark .bg-gray-100 {
+    background-color: #2d3748;
+}
+
+.bg-gray-200 {
+    background-color: #e5e7eb;
+}
+
+.dark .bg-gray-200 {
+    background-color: #4a5568;
+}
+
+/* Текстовые цвета */
+.text-gray-700 {
+    color: var(--text-light);
+}
+
+.dark .text-gray-700 {
+    color: var(--text-dark);
+}
+
+.text-gray-600 {
+    color: #4b5563;
+}
+
+.dark .text-gray-600 {
+    color: #cbd5e0;
+}
+
+.text-gray-800 {
+    color: #1f2937;
+}
+
+.dark .text-gray-800 {
+    color: #edf2f7;
+}
+
+/* Кнопки */
+.bg-blue-500 {
+    background-color: #3b82f6;
+}
+
+.dark .bg-blue-500 {
+    background-color: #2563eb;
+}
+
+.bg-green-500 {
+    background-color: #10b981;
+}
+
+.dark .bg-green-500 {
+    background-color: #16a34a;
+}
+
+/* Плавные переходы для кнопок */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.hover\:bg-blue-600:hover {
+    background-color: #2563eb;
+}
+
+.dark .hover\:bg-blue-600:hover {
+    background-color: #3b82f6;
+}
+
+.hover\:bg-green-600:hover {
+    background-color: #16a34a;
+}
+
+.dark .hover\:bg-green-600:hover {
+    background-color: #10b981;
+}
+
+/* Ссылки и hover для них */
+a:hover {
+    color: #1d4ed8; /* светлый синий */
+}
+
+.dark a:hover {
+    color: #60a5fa; /* темный синий */
+}
+
+/* Анимация fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
